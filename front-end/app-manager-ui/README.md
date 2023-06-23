@@ -27,3 +27,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 https://programmersportal.com/list-of-all-angular-mat-iconsmat-icons-library/
+
+Dashboard Columns:
+Name
+Application category
+Manufacturer
+Business process
+Application type
+Application family
+Architecture type
+Install type
+Technolocy stack
+User Base
+Platform
+Contract end date
+Support vendor
+Business criticality
+Data classification 
+Currency
+Rights
