@@ -1,0 +1,282 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add Product</mat-card-title>
+    <mat-card-subtitle>Enter the product details</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="productdetails-container">
+      <form class="productdetails-form">       
+      <hr>
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Application Name</mat-label>
+            <input matInput>
+          </mat-form-field></td>          
+        </tr></table>
+      
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder=""></textarea>
+          </mat-form-field>          
+        </p>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Programming Language</mat-label>
+            <mat-select>
+              <mat-option value="Java">Java</mat-option>
+              <mat-option value="Python">Python</mat-option>
+              <mat-option value="NodeJS">NodeJS</mat-option>
+              <mat-option value="Go">Go</mat-option>
+              <mat-option value="C++">C++</mat-option>
+            </mat-select>
+          </mat-form-field>
+          </p></td>
+        <td>
+          <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Application Type</mat-label>
+            <mat-select>
+              <mat-option value="Commercial Off-The-Shelf (COTS)">Commercial Off-The-Shelf (COTS)</mat-option>
+              <mat-option value="Government Off-The-Shelf (GOTS)">Government Off-The-Shelf (GOTS)</mat-option>
+              <mat-option value="Custom Developed">Custom Developed</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p></td></tr></table>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td>
+        <p>
+          <mat-slide-toggle class="example-margin" [checked]="true">
+            Project Analysis Worksheet Available
+          </mat-slide-toggle></p></td>
+        <td>
+          <p>        
+            <mat-slide-toggle class="example-margin" [checked]="true">
+              CIO Front Door Review Available
+            </mat-slide-toggle></p></td></tr>
+            </table>
+
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td>
+            <p>
+              <mat-form-field class="example-full-width">
+                <mat-label>Application User Base</mat-label>
+                <mat-select>
+                  <mat-option value="DEA Agents">DEA Agents</mat-option>                    
+                  <mat-option value="DEA Management">DEA Management</mat-option>
+                  <mat-option value="System Administrators">System Administrators</mat-option>
+                  <mat-option value="DEA Users">DEA Users</mat-option>
+                  <mat-option value="Non-DEA Users">Non-DEA Users</mat-option>
+                  <mat-option value="Shared, Other Law Enforcement Partners">Shared, Other Law Enforcement Partners</mat-option>
+                  <mat-option value="Commercial Parties">Commercial Parties</mat-option>
+                  <mat-option value="Citizens, General Public">Citizens, General Public</mat-option>                  
+                </mat-select>
+              </mat-form-field>
+              </p>
+          </td><td>
+              <p>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Application Status</mat-label>
+                  <mat-select>
+                    <mat-option value="Authority To Test (ATT)">Authority To Test (ATT)</mat-option>
+                    <mat-option value="Authority To Operate (ATO)">Authority To Operate (ATO)</mat-option>
+                    <mat-option value="No ATO or ATT">No ATO or ATT</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </p></td></tr></table>
+              
+              <table class="example-full-width" cellspacing="0"><tr>
+                <td>
+              <p>        
+                <mat-slide-toggle class="example-margin" [checked]="false">
+                  Mission Critical
+                </mat-slide-toggle></p></td><td>
+                  <p>        
+                    <mat-slide-toggle class="example-margin" [checked]="false">
+                      Database Employed
+                    </mat-slide-toggle></p>
+                </td></tr></table>
+
+                <table class="example-full-width" cellspacing="0"><tr>
+                  <td>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>General Support System</mat-label>
+                    <mat-select>
+                      <mat-option value="Firebird">Firebird</mat-option>
+                      <mat-option value="Intel (NS)">Intel (NS)</mat-option>
+                      <mat-option value="Special Operations (SOD)">Special Operations (SOD)</mat-option>
+                      <mat-option value="Special Technology (ST)">Special Technology (ST)</mat-option>
+                      <mat-option value="SFL9">SFL9</mat-option>
+                      <mat-option value="Diversion (TQD)">Diversion (TQD)</mat-option>
+                      <mat-option value="EPIC">EPIC</mat-option>
+                      <mat-option value="LABS">LABS</mat-option>
+                      <mat-option value="Unknown">Unknown</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p></td><td>
+
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>CSAM System</mat-label>
+                    <mat-select>
+                      <mat-option value="Account Management System (AMS)">Account Management System (AMS)</mat-option>
+                      <mat-option value="AirWatch on Premise (AWOP)">AirWatch on Premise (AWOP)</mat-option>
+                      <mat-option value="Aviation Division Office Internet (ADOI)">Aviation Division Office Internet (ADOI)</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p></td>
+                </tr></table>
+
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>FIPS-199 Impact level</mat-label>
+                    <mat-select>
+                      <mat-option value="Low">Low</mat-option>
+                      <mat-option value="Moderate">Moderate</mat-option>
+                      <mat-option value="High">High</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Hosting platform</mat-label>
+                    <mat-select>
+                      <mat-option value="DEA-managed physical server(s)">DEA-managed physical server(s)</mat-option>
+                      <mat-option value="DEA-managed virtual server(s)">DEA-managed virtual server(s)</mat-option>
+                      <mat-option value="High">High</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Cloud Usage</mat-label>
+                    <mat-select>                      
+                      <mat-option value="STRATUS">STRATUS</mat-option>
+                      <mat-option value="Commercial">Commercial</mat-option>
+                      <!-- <mat-option value="MS Azure">MS Azure</mat-option>
+                      <mat-option value="Amazon Web Service (AWS)">Amazon Web Service (AWS)</mat-option>
+                      <mat-option value="Google Cloud (GCP)">Google Cloud (GCP)</mat-option> -->
+                      <mat-option value="Government">Government</mat-option>                    
+                      <!-- <mat-option value="MS Azure">MS Azure</mat-option>
+                      <mat-option value="Amazon Web Service (AWS)">Amazon Web Service (AWS)</mat-option>
+                      <mat-option value="Google Cloud (GCP)">Google Cloud (GCP)</mat-option> -->  
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Application Endpoint / Address / URLs</mat-label>
+                    <textarea matInput placeholder=""></textarea>
+                  </mat-form-field>          
+                </p>
+
+                
+
+
+      <hr>
+                  <h2>Application Architecture</h2>
+                  <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Number of Servers</mat-label>
+            <input matInput placeholder="Enter the count">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Storage Usage</mat-label>
+            <input matInput placeholder="Disk">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Interconnections</mat-label>
+            <input matInput placeholder="HRM, CRM">
+          </mat-form-field></td>
+        </tr>
+      <tr>
+        <td colspan="3">
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Comments</mat-label>
+              <textarea matInput placeholder="Enter the details about the application"></textarea>
+            </mat-form-field>          
+          </p>
+        </td>
+      </tr>
+      </table>
+
+      <table class="example-full-width" cellspacing="0"><tr><td>
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Communications</mat-label>
+          <mat-select>                      
+            <mat-option value="Internet">Internet</mat-option>
+            <mat-option value="Intranet">Intranet</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p></td><td>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Operational Support</mat-label>
+          <mat-select>                      
+            <mat-option value="DEA ServiceDesk">DEA ServiceDesk</mat-option>
+            <mat-option value="Internal resources">Internal resources</mat-option>
+            <mat-option value="Others">Others</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p></td>
+      <td>
+
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>SaaS Alternative</mat-label>
+            <mat-select>                      
+              <mat-option value="Yes">Yes</mat-option>
+              <mat-option value="No">Yes</mat-option>
+              <mat-option value="Unknown">Unknown</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p></td>
+    </tr></table>
+      <hr>
+      <h2>Team Details</h2>
+      <table class="example-full-width" cellspacing="0"><tr><td>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Product Owner</mat-label>
+            <mat-select>                      
+              <mat-option value="Anna">Anna</mat-option>
+              <mat-option value="Millie">Millie</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p></td><td>
+  
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Technical Lead</mat-label>
+            <mat-select>                      
+              <mat-option value="Anna">Anna</mat-option>
+              <mat-option value="Millie">Millie</mat-option>
+              <mat-option value="John">John</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p></td></tr></table>
+
+      </form>            
+    </div>        
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" (click)="saveProduct()">
+      <mat-icon>save</mat-icon>
+      Save</button>
+    <button mat-button color="accent">
+      <mat-icon>clear_all</mat-icon>
+      Reset</button>
+  </mat-card-actions>
+</mat-card>
+

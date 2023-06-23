@@ -1,1 +1,52 @@
-<p>products works!</p>
+<div>
+  <h2>
+    Product Summary
+  </h2>
+</div>
+<div class="demo-button-container">
+    <button mat-raised-button (click)="addData()" class="demo-button" >
+      Add Product
+    </button>
+    <button
+        mat-raised-button
+        [disabled]="!dataToDisplay.length"
+        (click)="removeData()"
+        class="demo-button">
+      Remove Product
+    </button>
+  </div>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <!-- Position Column -->
+    <ng-container matColumnDef="code">
+      <th mat-header-cell *matHeaderCellDef>Code</th>
+      <td mat-cell *matCellDef="let element">{{element.code}}</td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell *matCellDef="let element">{{element.status}}</td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="productOwner">
+      <th mat-header-cell *matHeaderCellDef>Product Owner</th>
+      <td mat-cell *matCellDef="let element">{{element.productOwner}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="technicalLead">
+      <th mat-header-cell *matHeaderCellDef>Technical Lead</th>
+      <td mat-cell *matCellDef="let element">{{element.technicalLead}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
