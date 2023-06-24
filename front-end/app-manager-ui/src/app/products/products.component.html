@@ -3,21 +3,22 @@
     Product Summary
   </h2>
 </div>
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="SAP CRM" #input>
+</mat-form-field>
 <div class="demo-button-container">
     <button mat-raised-button (click)="addData()" class="demo-button" >
       Add Product
     </button>
     <button
         mat-raised-button
-        [disabled]="!dataToDisplay.length"
-        (click)="removeData()"
         class="demo-button">
-      Remove Product
+      Sync with ServiceNow
     </button>
   </div>
   
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
-
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table" matSort>
       <!-- Checkbox Column -->
   <ng-container matColumnDef="select">
     <th mat-header-cell *matHeaderCellDef>
@@ -38,91 +39,97 @@
     
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
       <td mat-cell *matCellDef="let element">{{element.name}}</td>
     </ng-container>
 
     <ng-container matColumnDef="applicationCategory">
-      <th mat-header-cell *matHeaderCellDef>Application category</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Application category</th>
       <td mat-cell *matCellDef="let element">{{element.applicationCategory}}</td>
     </ng-container>
 
     <ng-container matColumnDef="manufacturer">
-      <th mat-header-cell *matHeaderCellDef>Manufacturer</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Manufacturer</th>
       <td mat-cell *matCellDef="let element">{{element.manufacturer}}</td>
     </ng-container>
 
     <ng-container matColumnDef="businessProcess">
-      <th mat-header-cell *matHeaderCellDef>Business process</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Business process</th>
       <td mat-cell *matCellDef="let element">{{element.businessProcess}}</td>
     </ng-container>
 
     <ng-container matColumnDef="applicationType">
-      <th mat-header-cell *matHeaderCellDef>Application type</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Application type</th>
       <td mat-cell *matCellDef="let element">{{element.applicationType}}</td>
     </ng-container>
 
     <ng-container matColumnDef="applicationFamily">
-      <th mat-header-cell *matHeaderCellDef>Application family</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Application family</th>
       <td mat-cell *matCellDef="let element">{{element.applicationFamily}}</td>
     </ng-container>
 
     <ng-container matColumnDef="architectureType">
-      <th mat-header-cell *matHeaderCellDef>Architecture type</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Architecture type</th>
       <td mat-cell *matCellDef="let element">{{element.architectureType}}</td>
     </ng-container>
 
     <ng-container matColumnDef="installType">
-      <th mat-header-cell *matHeaderCellDef>Install type</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Install type</th>
       <td mat-cell *matCellDef="let element">{{element.installType}}</td>
     </ng-container>
 
     <ng-container matColumnDef="technolocyStack">
-      <th mat-header-cell *matHeaderCellDef>Technolocy stack</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Technolocy stack</th>
       <td mat-cell *matCellDef="let element">{{element.technolocyStack}}</td>
     </ng-container>
 
     <ng-container matColumnDef="userBase">
-      <th mat-header-cell *matHeaderCellDef>User Base</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>User Base</th>
       <td mat-cell *matCellDef="let element">{{element.userBase}}</td>
     </ng-container>
 
     <ng-container matColumnDef="platform">
-      <th mat-header-cell *matHeaderCellDef>Platform</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Platform</th>
       <td mat-cell *matCellDef="let element">{{element.platform}}</td>
     </ng-container>
 
     <ng-container matColumnDef="contractEndDate">
-      <th mat-header-cell *matHeaderCellDef>Contract end date</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Contract end date</th>
       <td mat-cell *matCellDef="let element">{{element.contractEndDate}}</td>
     </ng-container>
 
     <ng-container matColumnDef="supportVendor">
-      <th mat-header-cell *matHeaderCellDef>Support vendor</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Support vendor</th>
       <td mat-cell *matCellDef="let element">{{element.supportVendor}}</td>
     </ng-container>
 
     <ng-container matColumnDef="businessCriticality">
-      <th mat-header-cell *matHeaderCellDef>Business criticality</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Business criticality</th>
       <td mat-cell *matCellDef="let element">{{element.businessCriticality}}</td>
     </ng-container>
 
     <ng-container matColumnDef="dataClassification">
-      <th mat-header-cell *matHeaderCellDef>Data classification</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Data classification</th>
       <td mat-cell *matCellDef="let element">{{element.dataClassification}}</td>
     </ng-container>
 
     <ng-container matColumnDef="currency">
-      <th mat-header-cell *matHeaderCellDef>Currency</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Currency</th>
       <td mat-cell *matCellDef="let element">{{element.currency}}</td>
     </ng-container>
 
     <ng-container matColumnDef="rights">
-      <th mat-header-cell *matHeaderCellDef>Rights</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Rights</th>
       <td mat-cell *matCellDef="let element">{{element.rights}}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)"></tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
   </table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
   
