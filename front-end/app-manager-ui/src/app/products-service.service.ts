@@ -14,9 +14,16 @@ const ELEMENT_DATA: Product[] = [
 })
 export class ProductsServiceService {
 
+  products: Product[] = [];
+
   constructor() { }
 
   getProducts(): Product[]{
-    return ELEMENT_DATA;
+    this.products = ELEMENT_DATA.concat([]);
+    return this.products;
+  }
+
+  addProduct(product: Product) {
+    this.products.concat(product)
   }
 }

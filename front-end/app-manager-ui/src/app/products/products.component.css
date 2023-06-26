@@ -22,3 +22,7 @@ table {
 td, th {
   width: 25%;
 }
+
+div.project-list-container{
+  overflow-x: scroll;  
+}

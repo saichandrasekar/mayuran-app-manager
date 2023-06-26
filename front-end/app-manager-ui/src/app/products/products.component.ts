@@ -31,6 +31,7 @@ export class ProductsComponent implements AfterViewInit {
 
   constructor(private productsService: ProductsServiceService, private router: Router){
     let dataToDisplay = this.productsService.getProducts();
+    console.log('test here');
     this.dataSource = new MatTableDataSource<Product>(dataToDisplay);
   }
 
