@@ -9,6 +9,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { Router } from '@angular/router';
 
 @Component({
@@ -27,7 +29,8 @@ import { Router } from '@angular/router';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatDatepickerModule, MatNativeDateModule
   ],
 })
 export class ProductdetailsComponent {

@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Add Product</mat-card-title>
+    <mat-card-title>Crete new Application</mat-card-title>
     <mat-card-subtitle>Enter the product details</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
@@ -21,13 +21,135 @@
           </mat-form-field>          
         </p>
 
+        <hr>
+          <h2>Application Details</h2>
+
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Application Category</mat-label>
+            <mat-select>
+              <mat-option value="Sales">Sales</mat-option>
+              <mat-option value="Customer Support">Customer Support</mat-option>
+              <mat-option value="Human Capital Management">Human Capital Management</mat-option>
+              <mat-option value="Marketing">Marketing</mat-option>
+              <mat-option value="IT Service Management">IT Service Management</mat-option>              
+            </mat-select>
+          </mat-form-field>
+          </p></td><td>
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Manufacturer</mat-label>
+              <mat-select>
+                <mat-option value="SAP">SAP</mat-option>
+                <mat-option value="Oracle">Oracle</mat-option>
+                <mat-option value="ServiceNow">ServiceNow</mat-option>
+                <mat-option value="Hewlett-Packard">Hewlett-Packard</mat-option>
+                <mat-option value="Salesforce.com">Salesforce.com</mat-option>              
+              </mat-select>
+            </mat-form-field>
+            </p></td>
+          <td>
+<p>
+  <mat-form-field class="example-full-width">
+    <mat-label>Contract End Date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>  
+</p>
+
+          </td>
+          </tr></table>
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Support Vendor</mat-label>
+            <mat-select>
+              <mat-option value="KPMG">KPMG</mat-option>
+              <mat-option value="Infosys">Infosys</mat-option>
+              <mat-option value="TCS">TCS</mat-option>
+              <mat-option value="CapGemini">CapGemini</mat-option>
+              <mat-option value="Cognizant">Cognizant</mat-option>              
+              <mat-option value="Tech Mahindra">Tech Mahindra</mat-option>              
+              <mat-option value="IBM">IBM</mat-option>              
+            </mat-select>
+          </mat-form-field>
+          </p></td><td>
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Business Criticality</mat-label>
+              <mat-select>
+                <mat-option value="Low">Low</mat-option>
+                <mat-option value="Medium">Medium</mat-option>
+                <mat-option value="High">High</mat-option>
+              </mat-select>
+            </mat-form-field>
+            </p></td>
+          <td>
+            <p>
+              <mat-form-field class="example-full-width">
+                <mat-label>Data Classification</mat-label>
+                <mat-select>
+                  <mat-option value="Internal">Internal</mat-option>
+                  <mat-option value="Confidential">Confidential</mat-option>
+                </mat-select>
+              </mat-form-field>
+              </p>
+          </td>
+          </tr></table>
+
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td>
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Business Process</mat-label>
+              <mat-select>
+                <mat-option value="Quote to Cash">Quote to Cash</mat-option>
+                <mat-option value="Issue to Resolution">Issue to Resolution</mat-option>
+                <mat-option value="Campaigne to Launch">Campaigne to Launch</mat-option>
+              </mat-select>
+            </mat-form-field>
+            </p></td><td>
+            <p>
+              <mat-form-field class="example-full-width">
+                <mat-label>Application Family</mat-label>
+                <mat-select>
+                  <mat-option value="SAP CRM">SAP CRM</mat-option>
+                  <mat-option value="Oracle CRM">Oracle CRM</mat-option>
+                  <mat-option value="Siebel CRM">Siebel CRM</mat-option>
+                  <mat-option value="ServiceNoe ITSM">ServiceNoe ITSM</mat-option>
+                  <mat-option value="HP Enterprise">HP Enterprise</mat-option>              
+                  <mat-option value="Salesforce Cloud">Salesforce Cloud</mat-option>              
+                </mat-select>
+              </mat-form-field>
+              </p></td>              
+              <td>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Currency</mat-label>
+                    <mat-select>
+                      <mat-option value="1 Version Behind">1 Version Behind CRM</mat-option>
+                      <mat-option value="Current">Current</mat-option>
+                      <mat-option value="2 Version Behind">2 Version Behind CRM</mat-option>
+                      <mat-option value="3+ Version Behind">3+ Version Behind CRM</mat-option>          
+                    </mat-select>
+                  </mat-form-field>
+                  </p></td>               
+            </tr></table>
+
         <table class="example-full-width" cellspacing="0"><tr>
           <td>
         <p>
           <mat-form-field class="example-full-width">
-            <mat-label>Programming Language</mat-label>
+            <mat-label>Technology Stack</mat-label>
             <mat-select>
               <mat-option value="Java">Java</mat-option>
+              <mat-option value="PL/SQL">PL/SQL</mat-option>
+              <mat-option value="Apex">Apex</mat-option>
               <mat-option value="Python">Python</mat-option>
               <mat-option value="NodeJS">NodeJS</mat-option>
               <mat-option value="Go">Go</mat-option>
@@ -45,7 +167,12 @@
               <mat-option value="Custom Developed">Custom Developed</mat-option>
             </mat-select>
           </mat-form-field>
-        </p></td></tr></table>
+        </p></td>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>Rights</mat-label>
+          <input matInput placeholder="Enter the count">
+        </mat-form-field></td> 
+      </tr></table>
 
         <table class="example-full-width" cellspacing="0"><tr>
           <td>
@@ -82,12 +209,24 @@
                 <mat-form-field class="example-full-width">
                   <mat-label>Application Status</mat-label>
                   <mat-select>
-                    <mat-option value="Authority To Test (ATT)">Authority To Test (ATT)</mat-option>
-                    <mat-option value="Authority To Operate (ATO)">Authority To Operate (ATO)</mat-option>
-                    <mat-option value="No ATO or ATT">No ATO or ATT</mat-option>
+                    <mat-option value="DEA Agents">Deployed and Operational</mat-option>                    
+                    <mat-option value="DEA Management">Project Initiation</mat-option>
+                    <mat-option value="System Administrators">In Development</mat-option>
                   </mat-select>
                 </mat-form-field>
-              </p></td></tr></table>
+              </p></td>
+              <td>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Operational Status</mat-label>
+                    <mat-select>
+                      <mat-option value="Authority To Test (ATT)">Authority To Test (ATT)</mat-option>
+                      <mat-option value="Authority To Operate (ATO)">Authority To Operate (ATO)</mat-option>
+                      <mat-option value="No ATO or ATT">No ATO or ATT</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p></td>
+            </tr></table>
               
               <table class="example-full-width" cellspacing="0"><tr>
                 <td>
@@ -143,30 +282,85 @@
                   </mat-form-field>
                 </p>
 
+                <hr>
+                  <h2>Hosting Platform</h2>
+
                 <p>
                   <mat-form-field class="example-full-width">
-                    <mat-label>Hosting platform</mat-label>
+                    <mat-label>Server</mat-label>
                     <mat-select>
                       <mat-option value="DEA-managed physical server(s)">DEA-managed physical server(s)</mat-option>
-                      <mat-option value="DEA-managed virtual server(s)">DEA-managed virtual server(s)</mat-option>
-                      <mat-option value="High">High</mat-option>
+                      <mat-option value="DEA-managed virtual server(s)">DEA-managed virtual server(s)</mat-option>                      
                     </mat-select>
                   </mat-form-field>
                 </p>
 
                 <p>
                   <mat-form-field class="example-full-width">
-                    <mat-label>Cloud Usage</mat-label>
+                    <mat-label>Physical Server</mat-label>
+                    <mat-select>
+                      <mat-option value="Sterling Park">Sterling Park</mat-option>
+                        <mat-option value="Dallas Labs East">Dallas Labs East</mat-option>
+                        <mat-option value="Dallas Labs West">Dallas Labs West</mat-option>
+                        <mat-option value="ST">ST</mat-option>
+                        <mat-option value="SOD">SOD</mat-option>
+                        <mat-option value="EPIC">EPIC</mat-option>
+                        <mat-option value="Other DEA facility">Other DEA facility</mat-option>                      
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Virtual Server</mat-label>
+                    <mat-select>
+                      <mat-option value="STRATUS">STRATUS</mat-option>
+                        <mat-option value="Firebird">Firebird</mat-option>
+                        <mat-option value="EPIC">EPIC</mat-option>
+                        <mat-option value="Diversion">Diversion</mat-option>
+                        <mat-option value="SOD">SOD</mat-option>
+                        <mat-option value="ST">ST</mat-option>
+                        <mat-option value="Other DEA virtualization platform">Other DEA virtualization platform</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Virtual Machines</mat-label>
+                    <mat-select>
+                      <mat-option value="STRATUS">Hyper V</mat-option>
+                        <mat-option value="Firebird">VMWare</mat-option>
+                        <mat-option value="EPIC">RHEL</mat-option>
+                        <mat-option value="Diversion">Other</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+
+                <hr>
+                <h2>Cloud Details</h2>
+                <p>        
+                  <mat-slide-toggle class="example-margin" [checked]="false">
+                    Cloud Usage
+                  </mat-slide-toggle></p>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Cloud Provider</mat-label>
                     <mat-select>                      
                       <mat-option value="STRATUS">STRATUS</mat-option>
-                      <mat-option value="Commercial">Commercial</mat-option>
-                      <!-- <mat-option value="MS Azure">MS Azure</mat-option>
-                      <mat-option value="Amazon Web Service (AWS)">Amazon Web Service (AWS)</mat-option>
-                      <mat-option value="Google Cloud (GCP)">Google Cloud (GCP)</mat-option> -->
-                      <mat-option value="Government">Government</mat-option>                    
-                      <!-- <mat-option value="MS Azure">MS Azure</mat-option>
-                      <mat-option value="Amazon Web Service (AWS)">Amazon Web Service (AWS)</mat-option>
-                      <mat-option value="Google Cloud (GCP)">Google Cloud (GCP)</mat-option> -->  
+                      <mat-option value="Commercial">Commercial</mat-option>                      
+                      <mat-option value="Government">Government</mat-option>                                          
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Cloud Vendor</mat-label>
+                    <mat-select>                      
+                      <mat-option value="STRATUS">MS Azure</mat-option>
+                      <mat-option value="Commercial">Amazon Web Service</mat-option>                      
+                      <mat-option value="Government">GCP</mat-option>                    
+                      <mat-option value="Government">Other</mat-option>
                     </mat-select>
                   </mat-form-field>
                 </p>
@@ -183,7 +377,42 @@
 
       <hr>
                   <h2>Application Architecture</h2>
-                  <table class="example-full-width" cellspacing="0"><tr>
+                  <table class="example-full-width" cellspacing="0">
+                    <tr>
+                      <td>
+                        <p>
+                          <mat-form-field class="example-full-width">
+                            <mat-label>Architecture Type</mat-label>
+                            <mat-select>
+                              <mat-option value="Web Based">Web Based</mat-option>                    
+                              <mat-option value="Client Server">Client Server</mat-option>                    
+                            </mat-select>
+                          </mat-form-field>
+                        </p></td>
+                      <td>
+                        <p>
+                          <mat-form-field class="example-full-width">
+                            <mat-label>Install Type</mat-label>
+                            <mat-select>
+                              <mat-option value="Third Party Hosted">Third Party Hosted</mat-option>                    
+                              <mat-option value="On Premise">On Premise</mat-option>                    
+                              <mat-option value="Cloud">Cloud</mat-option>                    
+                            </mat-select>
+                          </mat-form-field>
+                        </p></td>
+                        <td>
+                          <p>
+                            <mat-form-field class="example-full-width">
+                              <mat-label>Platform</mat-label>
+                              <mat-select>
+                                <mat-option value="Unix">Unix</mat-option>
+                                <mat-option value="AWS">AWS</mat-option>
+                                <mat-option value="Microsoft">Microsoft</mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </p></td>
+                    </tr>
+                    <tr>
           <td><mat-form-field class="example-full-width">
             <mat-label>Number of Servers</mat-label>
             <input matInput placeholder="Enter the count">

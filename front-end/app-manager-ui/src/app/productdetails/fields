@@ -18,7 +18,7 @@
     FIPS-199 Impact level | Dropdown | Low,Moderate,High
     Hosting platform | Dropdown | 
         DEA-managed physical server(s)
-            Sterling Park,Dallas,Labs,East,West,??,ST,SOD,EPIC, Other DEA facility (please identify here)Narrative response here,DEA hosting facility
+            Sterling Park,Dallas Labs(East,West),ST,SOD,EPIC, Other DEA facility
         DEA-managed virtual server(s)
             STRATUS managed VM’s
                 Hyper V,VMware,RHEL,Other (please identify here)(Narrative response here)
@@ -61,3 +61,23 @@
     Technical Lead | Dropdown | 
     Product Owner | Dropdown | 
     Software as a Service | dropdown | Yes, No, Unknown
+
+-----------
+
+Name
+Application category
+Manufacturer
+Business process
+Application type
+Application family
+Architecture type
+Install type
+Technolocy stack
+User Base
+Platform
+Contract end date
+Support vendor
+Business criticality
+Data classification
+Currency
+Rights
