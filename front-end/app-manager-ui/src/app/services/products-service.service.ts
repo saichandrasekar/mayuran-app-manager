@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Product } from './models/product.model';
+import { Product } from '../models/product.model';
 
 const ELEMENT_DATA: Product[] = [  
   {position: 1, code:'D234',name:'SAP CRM',status:'',applicationCategory:'Sales',manufacturer:'SAP',businessProcess:'Quote to Cash',applicationType:'COTS',applicationFamily:'SAP CRM',architectureType:'Web Based',installType:'Third Party Hosted',technolocyStack:'Netweaver',userBase:'1000+',platform:'Unix',contractEndDate:'2017-03-13',supportVendor:'KPMC',businessCriticality:'Medium',dataClassification:'Confidential',currency:'2 Versions behind',rights:'',productOwner:'', technicalLead:''},

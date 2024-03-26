@@ -1,0 +1,119 @@
+<div>
+  <h2>
+    Process Summary
+  </h2>
+</div>
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="SAP CRM" #input>
+</mat-form-field>
+<div class="demo-button-container">
+    <button mat-raised-button (click)="addData()" class="demo-button" >
+      Add Process
+    </button>
+    <button mat-raised-button (click)="addData()" class="demo-button" >
+      Edit Process
+    </button>    
+  </div>
+  
+  <div class="project-list-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table" matSort>
+      <!-- Checkbox Column -->
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                    [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()"
+                    [aria-label]="checkboxLabel()">
+      </mat-checkbox>
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox (click)="$event.stopPropagation()"
+                    (change)="$event ? selection.toggle(row) : null"
+                    [checked]="selection.isSelected(row)"
+                    [aria-label]="checkboxLabel(row)">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+    
+    <!-- Name Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+      <td mat-cell *matCellDef="let element">{{element.title}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+      <td mat-cell *matCellDef="let element">{{element.description}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="processOwner">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Process Owner</th>
+      <td mat-cell *matCellDef="let element">{{element.processOwner}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="stackholders">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Stackholders</th>
+      <td mat-cell *matCellDef="let element">{{element.stackholders}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="processSteps">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Process Steps</th>
+      <td mat-cell *matCellDef="let element">{{element.processSteps}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="decisionPoints">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Decision Points</th>
+      <td mat-cell *matCellDef="let element">{{element.decisionPoints}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="inputsAndOutputs">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Inputs and Outputs</th>
+      <td mat-cell *matCellDef="let element">{{element.inputsAndOutputs}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="technologyAndTools">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Technology and Tools</th>
+      <td mat-cell *matCellDef="let element">{{element.technologyAndTools}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="performanceMeasure">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Performance Measure</th>
+      <td mat-cell *matCellDef="let element">{{element.performanceMeasure}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="riskAndMitigationStrategy">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Risk and Mitigation Strategies</th>
+      <td mat-cell *matCellDef="let element">{{element.riskAndMitigationStrategy}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="relatedProcesses">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Related Processes</th>
+      <td mat-cell *matCellDef="let element">{{element.relatedProcesses}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="revisionHistory">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Revision History</th>
+      <td mat-cell *matCellDef="let element">{{element.revisionHistory}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="itemType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Item Type</th>
+      <td mat-cell *matCellDef="let element">{{element.itemType}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="path">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Path</th>
+      <td mat-cell *matCellDef="let element">{{element.path}}</td>
+    </ng-container>   
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)"></tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+</div>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  

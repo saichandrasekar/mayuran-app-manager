@@ -1,0 +1,83 @@
+
+    Name | Input 
+    Description | Textarea
+    Programming Language | Dropdown | Java, Python, NodeJs, Go, C++
+    Application Type | Dropdown | Commercial Off-The-Shelf (COTS), Government Off-The-Shelf (GOTS), Custom Developed
+    Project Analysis Worksheet | Switch Yes,No
+    CIO Front Door Review  | Switch Yes, No
+    Application User Base | dropdown | DEA Agents, DEA Management, System Administrators, DEA Users, Non-DEA Users, 'Shared, Other Law Enforcement Partners', Commercial Parties, 'Citizens, General Public'
+    Status | Dropdown | Authority To Test (ATT), Authority To Operate (ATO), No ATO or ATT
+    Mission Critical | Switch yes or No
+    General Support System | Dropdown  | Firebird, Intel (NS), Special Operations (SOD), Special Technology (ST), SFL9, Diversion (TQD), EPIC, LABS, Unknown
+    CSAM System | Dropdown | 
+            Account Management System (AMS),AirWatch on Premise (AWOP),Aviation Division Office Internet (ADOI),Callyo,CASTLE,CONCORDE (formerly IMPACT),Confidential Sources System Concorde (CSSC),Controlled Substance Ordering System (CSOS),Cross Domain Service (CDS),DEA Analysis and Response Tracking System (DARTS),DEA FHR Navigator (FHRN),DEA Internet Capability Endeavor (DICE),
+            DEA UFMS,DEA Vehicle Management Information System (VMIS),DEA Video Teleconferencing System (VTC),DEAgov Website,Defiance,Depot Tracking System (DTS),Digital Evidence Laboratory Findings Network (SFL9),Docket Master System (DMS),EPIC Seizure System (ESS),Financial Information Reporting & System (FIRST),Firebird,Fountainhead,Geographic Information System,Global Discovery,
+            Gulf Radio Rf,Internet Intercept and Delivery System (IIDS),Inventory Retrieval Management System (IRMS),Lab as a Service (LaaS),Laboratory Information System (LIMS),Management Network (MN),Mobility Services (MS),National Forensic Laboratory Information System (NFLIS),Office of Diversion Registrant Support Network (ODRSN),Office of Diversion Web (ODWeb),
+            PenLink,Polynet,Priority Target Activity Resources and Reporting System (PTARRS),Rattler Radio,Remote Analysis Viewing and Notation System (RAVANS),Secure Notebook Solution (SNS),Source License Plate Reader,Speedway - Classified,Speedway - Unclassified,Spider Core,STRATUS,Task Force Officer Body Worn Camera Initiative,Translation and Transcription Support System (T2S2) PeniLink,
+            Translation and Transcription Support System (T2S2) Voice Box III,Validation Integrity and Penetration Response (VIPR),Video Surveillance,Virtual Desktop Interace (VDI),Web Time and Attendance (WebTA),Wireless Network (WN),Other (Show a text box)
+    FIPS-199 Impact level | Dropdown | Low,Moderate,High
+    Hosting platform | Dropdown | 
+        DEA-managed physical server(s)
+            Sterling Park,Dallas Labs(East,West),ST,SOD,EPIC, Other DEA facility
+        DEA-managed virtual server(s)
+            STRATUS managed VM’s
+                Hyper V,VMware,RHEL,Other (please identify here)(Narrative response here)
+            Firebird managed VM’s 
+                Hyper V,VMware,RHEL,Other (please identify here)(Narrative response here)
+            EPIC managed VM’s
+                Hyper V,VMware,RHEL,Other (please identify here)    (Narrative response here)
+            Diversion managed VM’s
+                Hyper V,VMware,RHEL,Other (please identify here) (Narrative response here)
+            SOD managed VM’s
+                Hyper V,VMware,RHEL, Other (please identify here)   (Narrative response here)
+            ST managed VM’s
+                Hyper V,VMware,RHEL,Other (please identify here)    (Narrative response here)
+            Other DEA virtualization platform (please identify here)
+                Narrative response here – DEA virtualization platform,Hyper V, VMware,  RHEL,    Other (please identify here)    Narrative response
+    Using cloud | Switch | 
+        Yes
+            STRATUS
+            Commercial
+            MS Azure
+            Amazon Web Service (AWS)
+            Google Cloud (GCP)
+            Other (please identify here)
+            Narrative response
+            Government
+            MS Azure Government (MAG)
+            Amazon Web Service Government (AWS-Gov)
+            Google Cloud Government (GCP-Gov)
+            Other (please identify here)   Narrative response
+        No
+    Application Endpoint / Address | Textarea
+    Application architecture | section | 
+        System components | Input 
+        Number of servers | Input 
+        Storage usage  | Input 
+        Interconnections  | Input
+    Database | Switch | Yes,No
+    Communications | Switch | Internet, Intranet
+    Operational Support | Dropdown | DEA ServiceDesk,Internal resources,Other (please identify here)Narrative response here
+    Technical Lead | Dropdown | 
+    Product Owner | Dropdown | 
+    Software as a Service | dropdown | Yes, No, Unknown
+
+-----------
+
+Name
+Application category
+Manufacturer
+Business process
+Application type
+Application family
+Architecture type
+Install type
+Technolocy stack
+User Base
+Platform
+Contract end date
+Support vendor
+Business criticality
+Data classification
+Currency
+Rights

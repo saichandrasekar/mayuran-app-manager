@@ -9,16 +9,11 @@
 </mat-form-field>
 <div class="demo-button-container">
     <button mat-raised-button (click)="addData()" class="demo-button" >
-      Add Application
+      Add Process
     </button>
     <button mat-raised-button (click)="addData()" class="demo-button" >
-      Edit Application
-    </button>
-    <button
-        mat-raised-button
-        class="demo-button">
-      Sync with ServiceNow
-    </button>
+      Edit Process
+    </button>    
   </div>
   
   <div class="project-list-container">
@@ -135,5 +130,5 @@
     </tr>
   </table>
 </div>
-<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of process"></mat-paginator>
   

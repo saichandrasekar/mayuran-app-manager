@@ -4,8 +4,7 @@ import {Observable, ReplaySubject} from 'rxjs';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule, MatTableDataSource} from '@angular/material/table';
 import { Router } from '@angular/router';
-import { ProductsServiceService } from '../services/products-service.service';
-import { Product } from '../models/product.model';
+
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {SelectionModel} from '@angular/cdk/collections';
 
@@ -13,26 +12,29 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { Process } from '../models/process.model';
+import { ProcessService } from '../services/process-service.service';
+
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css'],
+  selector: 'app-process',
+  templateUrl: './process.component.html',
+  styleUrls: ['./process.component.css'],
   standalone: true,
   imports: [MatButtonModule, MatCheckboxModule,MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule],
 })
-export class ProductsComponent implements AfterViewInit {
-  displayedColumns: string[] = ['select','name','applicationCategory','manufacturer','businessProcess','applicationType','applicationFamily','architectureType','installType','technolocyStack','userBase','platform','contractEndDate','supportVendor','businessCriticality','dataClassification','currency','rights']; 
-  dataSource : MatTableDataSource<Product>;
-  selection = new SelectionModel<Product>(true, []);
+export class ProcessComponent implements AfterViewInit {
+  displayedColumns: string[] = ['path','itemType','revisionHistory','relatedProcesses','riskAndMitigationStrategy','performanceMeasure','technologyAndTools','inputsAndOutputs','decisionPoints','processSteps','stackholders','processOwner','description','title','select'].reverse(); 
+  dataSource : MatTableDataSource<Process>;
+  selection = new SelectionModel<Process>(true, []);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;  
 
-  constructor(private productsService: ProductsServiceService, private router: Router){
-    let dataToDisplay = this.productsService.getProducts();
+  constructor(private processService: ProcessService, private router: Router){
+    let dataToDisplay = this.processService.getProcesses();
     console.log('test here');
-    this.dataSource = new MatTableDataSource<Product>(dataToDisplay);
+    this.dataSource = new MatTableDataSource<Process>(dataToDisplay);
   }
 
   ngAfterViewInit() {
@@ -50,7 +52,7 @@ export class ProductsComponent implements AfterViewInit {
   }
   
   addData() {
-    this.router.navigateByUrl('/products');
+    this.router.navigateByUrl('/processdetail');
   }
 
   isAllSelected() {
@@ -69,7 +71,7 @@ export class ProductsComponent implements AfterViewInit {
   }
 
   /** The label for the checkbox on the passed row */
-  checkboxLabel(row?: Product): string {
+  checkboxLabel(row?: Process): string {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
@@ -77,21 +79,21 @@ export class ProductsComponent implements AfterViewInit {
   }
 }
 
-class ExampleDataSource extends DataSource<Product> {
-  private _dataStream = new ReplaySubject<Product[]>();
+class ExampleDataSource extends DataSource<Process> {
+  private _dataStream = new ReplaySubject<Process[]>();
 
-  constructor(initialData: Product[]) {
+  constructor(initialData: Process[]) {
     super();
     this.setData(initialData);
   }
 
-  connect(): Observable<Product[]> {
+  connect(): Observable<Process[]> {
     return this._dataStream;
   }
 
   disconnect() {}
 
-  setData(data: Product[]) {
+  setData(data: Process[]) {
     this._dataStream.next(data);
   }
 }
