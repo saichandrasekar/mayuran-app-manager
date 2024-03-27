@@ -14,9 +14,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css'],
+  selector: 'app-processdetails',
+  templateUrl: './processdetails.component.html',
+  styleUrls: ['./processdetails.component.css'],
   standalone: true,
   imports: [
     FormsModule,
@@ -33,7 +33,7 @@ import { Router } from '@angular/router';
     MatDatepickerModule, MatNativeDateModule
   ],
 })
-export class LandingComponent {
+export class ProcessdetailsComponent {
   hideRequiredControl = new FormControl(false);
   floatLabelControl = new FormControl('auto' as FloatLabelType);
   options = this._formBuilder.group({
@@ -47,11 +47,7 @@ export class LandingComponent {
     return this.floatLabelControl.value || 'auto';
   }
 
-  navigateProcessSummary() {
+  saveProcess() {
     this.router.navigateByUrl('/processsummary');
-  }
-
-  navigateChangeRequestSummary() {
-    this.router.navigateByUrl('/changerequestsummary');
   }
 }

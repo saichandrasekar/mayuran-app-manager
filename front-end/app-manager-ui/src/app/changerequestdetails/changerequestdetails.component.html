@@ -1,0 +1,136 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create new Change Request</mat-card-title>
+    <mat-card-subtitle>Enter the change request details</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="productdetails-container">
+      <form class="productdetails-form">       
+      <hr>
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Title</mat-label>
+            <input matInput>
+          </mat-form-field></td>          
+        </tr></table>
+      
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder=""></textarea>
+          </mat-form-field>          
+        </p>
+
+        <hr>
+          <h2>Process Details</h2>
+
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td>
+        <p>
+          <mat-form-field class="example-full-width">
+            <mat-label>Process Owner</mat-label>
+            <mat-select>
+              <mat-option value="TCV">TCV</mat-option>
+              <mat-option value="TIO">TIO</mat-option>
+            </mat-select>
+          </mat-form-field>
+          </p></td><td>
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Stack Holders</mat-label>
+              <mat-select multiple>
+                <mat-option value="CISO">CISO</mat-option>
+                <mat-option value="ISSM">ISSM</mat-option>
+                <mat-option value="ISSE">ISSE</mat-option>
+                <mat-option value="ISSO">ISSO</mat-option>                
+                <mat-option value="NETWORK_ENGINEERS">Network Engineers</mat-option>
+                <mat-option value="VAPT">VAPT</mat-option>
+                <mat-option value="CCB_MEMBERS">CCB Members</mat-option>
+              </mat-select>
+            </mat-form-field>
+            </p></td>          
+          </tr></table>
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Process Steps</mat-label>
+              <textarea matInput placeholder=""></textarea>
+            </mat-form-field>          
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Decision Points</mat-label>
+              <textarea matInput placeholder=""></textarea>
+            </mat-form-field>          
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Inputs and Outputs</mat-label>
+              <textarea matInput placeholder=""></textarea>
+            </mat-form-field>          
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Technology and Tools</mat-label>
+              <textarea matInput placeholder=""></textarea>
+            </mat-form-field>          
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Perfomance Measure</mat-label>
+              <textarea matInput placeholder=""></textarea>
+            </mat-form-field>          
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Risk and Mitigation Strategy</mat-label>
+              <textarea matInput placeholder=""></textarea>
+            </mat-form-field>          
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Related Process</mat-label>
+              <textarea matInput placeholder=""></textarea>
+            </mat-form-field>          
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Revision History</mat-label>
+              <textarea matInput placeholder=""></textarea>
+            </mat-form-field>          
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Item Type</mat-label>
+              <mat-select>
+                <mat-option value="ITEM">Item</mat-option>                
+              </mat-select>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Path</mat-label>
+              <input matInput placeholder="Enter the path">
+            </mat-form-field>
+          </p>
+      </form>            
+    </div>        
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary" (click)="saveProcess()">
+      <mat-icon>save</mat-icon>
+      Save</button>
+    <button mat-button color="accent">
+      <mat-icon>clear_all</mat-icon>
+      Reset</button>
+  </mat-card-actions>
+</mat-card>
+
